@@ -8,5 +8,10 @@ for item in fruits:
     
 
 
-for numbers in range(1,100):
+for numbers in range(1,100,3):
     print(numbers)
+
+total =0
+for num in range(1,101):
+    total += num
+    print(total)
