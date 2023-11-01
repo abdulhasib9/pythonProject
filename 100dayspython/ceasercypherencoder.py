@@ -1,4 +1,4 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
@@ -31,4 +31,22 @@ def encrypt(plain_text,shift_amount):
     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
-encrypt(text,shift)
+#encrypt(text,shift)
+
+
+#decrypt function 
+def decrypt(d_text,d_shift):
+    cypher_text2 =""
+    for letter in d_text:
+        position=alphabet.index(letter)
+        new_position = position-d_shift
+        new_letter=alphabet[new_position]
+        cypher_text2 +=new_letter
+    print(f"the decoded text is {cypher_text2}")
+    
+if direction == "encode":
+    encrypt(text,shift)
+elif direction=="decode":
+    decrypt(d_text=text,d_shift=shift)
+else:
+    print("Sorry invalid entry!")
