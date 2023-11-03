@@ -1,3 +1,4 @@
+import os
 from art import logo
 print(logo)
 
@@ -26,4 +27,6 @@ while not bidding_finished:
     if should_continue.lower() == 'no':
         bidding_finished=True
         findhighest_bidder(bids)
+    elif should_continue.lower()=='yes':
+        os.system('clear')
         
