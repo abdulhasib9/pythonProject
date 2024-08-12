@@ -24,3 +24,12 @@ def return_multiple(x,y):
 
 x,y = return_multiple(23,44)
 print(f"{x}   {y}")
+
+count =23
+
+def access_global():
+    global count
+    count = count+1
+    print (count)
+    
+access_global()
