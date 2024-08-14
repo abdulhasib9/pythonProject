@@ -28,3 +28,17 @@ def apple_cake(name):
     print(f'preparing {name} cake!!!! ')
     
 apple_cake('apple')
+
+
+def discount(func):
+    def wrapper(price):
+        func(price)
+        return func(price/2)
+    return wrapper
+
+@discount
+
+def sale(price):
+    return price
+
+print(sale(2000))
