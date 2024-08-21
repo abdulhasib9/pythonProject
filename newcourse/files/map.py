@@ -17,3 +17,7 @@ list1 =[2,3,4,5]
 
 sq = list(map(lambda x: x**x ,list1))
 print(sq)
+
+names= ['noman','sahar','hasib']
+cap = list(map(str.capitalize,names))
+print(cap)
